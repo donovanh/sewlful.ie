@@ -1,0 +1,345 @@
+:root {
+  /* Custom variable values here */
+  --highlight-colour: #0094cf;
+  --highlight-colour-light: #f4f2f0;
+  --highlight-colour-hover: #00719e;
+  --text-light: #999;
+  --secondary-highlight-colour: #40C9A2;
+}
+
+/* Typography */
+/*! Typebase.less v0.1.0 | MIT License */
+/* Setup */
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 118%;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 137.5%;
+  }
+}
+
+/* Copy & Lists */
+p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+ul li,
+ol li {
+  line-height: 1.5rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+/* Change heading typefaces here */
+  font-weight: 1800;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
+h1 {
+  font-size: 2.75rem;
+  line-height: 3.5rem;
+  margin-top: 3rem;
+}
+@media screen and (min-width: 400px) {
+  h1 {
+    font-size: 4.242rem;
+    line-height: 4.5rem;
+    margin-top: 3rem;
+  }
+}
+h2 {
+  font-size: 1.828rem;
+  line-height: 2rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 400px) {
+  h2 {
+    font-size: 2.828rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+  }
+}
+h3 {
+  font-size: 1.214rem;
+}
+@media screen and (min-width: 400px) {
+  h3 {
+    font-size: 1.414rem;
+  }
+}
+h4 {
+  font-size: 0.707rem;
+}
+h5 {
+  font-size: 0.4713333333333333rem;
+}
+h6 {
+  font-size: 0.3535rem;
+}
+a {
+  transition: all 0.2s ease-out;
+}
+/* Tables */
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  padding: 0;
+  line-height: 33px;
+}
+/* Code blocks */
+code {
+  vertical-align: bottom;
+}
+/* Leading paragraph text */
+.lead {
+  font-size: 1.414rem;
+  line-height: 2rem;
+}
+/* Hug the block above you */
+.hug {
+  margin-top: 0;
+}
+
+/* General styles */
+
+body {
+  margin: 0 auto;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+}
+
+a {
+  color: var(--highlight-colour);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--highlight-colour-hover);
+  text-decoration: underline;
+}
+
+p code {
+  background-color: var(--highlight-colour-light);
+  border-radius: 5px;
+  padding: 0.2rem 0.25rem 0.3rem;
+}
+
+details {
+  margin: 2rem 0 1rem;
+}
+
+details section {
+  border-radius: 10px;
+  background-color: var(--highlight-colour-light);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+details section p:first-child {
+  margin-top: 0;
+}
+
+/* Header */
+
+.site-header {
+  display: flex;
+}
+
+.logo {
+  margin: 1rem 0 0 1rem;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 1rem;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 0.5em;
+  position: relative;
+  border-radius: 0.25em;
+  color: #00194E;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+nav li a {
+  transition: all 0.2s ease-out;
+}
+
+nav a:hover {
+  color: #000;
+  background: rgba(255,255,255,0.8)
+}
+
+/* .page-header {
+  margin-top: 3rem;
+} */
+
+/* .back-to-top {
+  background: var(--highlight-colour-light);
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
+  border-radius: 10px;
+  font-size: 0.75rem;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  will-change: opacity;
+  top: 0.25rem;
+  left: 0.5rem;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.back-to-top p {
+  margin: 0;
+}
+
+.back-to-top a {
+  padding: 0.5rem;
+  line-height: 2.5;
+} */
+
+/* Content */
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+main > h1 {
+  margin-top: 0;
+}
+
+/* Email signup */
+
+.email-signup {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Footer */
+
+footer {
+  background: var(--secondary-highlight-colour);
+  color: #fff;
+  margin: 1rem 0 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+}
+
+.about {
+  background: var(--highlight-colour-light);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0 0;
+}
+
+.about h3 {
+  margin: 0.5rem 0 0;
+}
+
+/* post pages */
+
+.post-header h1 {
+  margin-top: 0.5rem;
+}
+
+.post-meta {
+  background: var(--highlight-colour-light);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0 0;
+}
+
+.post-meta p {
+  margin: 0.25rem;
+}
+
+.page-nav {
+  list-style-type: none;
+  margin: .5rem 0;
+  padding: 0;
+}
+
+.page-nav li { 
+  display: inline-block;
+  font-size: 1.25rem;
+  margin: 0 .25rem;
+  padding: 0;
+}
+
+.page-nav li .page-nav-page-num {
+  padding: .25rem .5rem;
+}
+
+.post-content img {
+  border-radius: 5px;
+  box-shadow: 0 0 0 5px var(--highlight-colour-light);
+  max-width: 100%;
+  margin: 0.5rem 0;
+}
+
+[aria-current]{
+  background-color: #eee;
+}
