@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    {% include 'partials/_head.njk' %}
+
+</head>
+<body>
+    <a id="top"></a>
+    {% include 'partials/_header.njk' %}
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    {% include 'partials/_footer.njk' %}
+</body>
+</html>
